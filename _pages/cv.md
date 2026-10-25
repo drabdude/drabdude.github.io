@@ -3,9 +3,9 @@ layout: cv
 permalink: /cv/
 title: cv
 nav: true
-nav_order: 5
-cv_pdf: Arjun_Sethi-Olowin_CV_current.pdf
-description: My CV
+nav_order: 3
+cv_pdf: Arjun_Sethi-Olowin_CV.pdf
+description:
 toc:
   sidebar: left
 ---

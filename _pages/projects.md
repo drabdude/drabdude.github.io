@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
-nav: false
-nav_order: 3
-display_categories: [work, fun]
+title: research
+permalink: /research/
+description: Current and past research projects.
+nav: true
+nav_order: 1
+display_categories: [current, past]
 horizontal: false
 ---
 
@@ -62,4 +62,19 @@ horizontal: false
   </div>
   {% endif %}
 {% endif %}
+</div>
+
+---
+
+## talks
+
+- *Efficient Solvers for Linear Optimization via the Hierarchically Semi-Separable Matrix Factorization.* Invited minisymposium talk, SIAM Conference on Mathematics of Data Science, Salt Lake City, UT, November 2026.
+- *Efficient Solvers for Linear Optimization via the Hierarchically Semi-Separable Matrix Factorization.* Invited minisymposium talk, Joint Mathematics Meetings, Chicago, IL, January 2027.
+
+## publications
+
+<div class="publications">
+
+{% bibliography %}
+
 </div>
