@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mixed-Precision Trust-Region Methods — Arjun Sethi-Olowin</title>
-<meta name="description" content="Lower-precision linear algebra for PDE-constrained optimization">
+<meta name="description" content="Mixed-precision gradient methods for trust-region algorithms in PDE-constrained optimization, with theoretical guarantees, developed with Sandia's Rapid Optimization Library team.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>∑</text></svg>">
 <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,12 +31,13 @@
 <div class="wrap">
 
 <a class="back" href="../research.html">← Back to research</a>
-<h1>Mixed-Precision Trust-Region Methods</h1>
-<div class="subtitle">Lower-precision linear algebra for PDE-constrained optimization</div>
-<div class="meta-line">With Bobby Baraldi · Rapid Optimization Library team, Sandia National Laboratories · Summer 2025</div>
+<span class="badge">Sandia · 2025</span>
+<h1 style="margin-top:10px">Mixed-Precision Trust-Region Methods</h1>
+<div class="meta-line">With Bobby Baraldi · Sandia National Laboratories · Summer 2025</div>
 <hr class="rule">
-<div class="prose"><p>PDE-constrained optimization problems, such as optimal control or inverse problems governed by partial differential equations, are expensive because every iteration requires large linear solves. Modern hardware performs single- and half-precision arithmetic much faster than double precision, but lower precision introduces errors that can stall or derail an optimization method.</p><p>In my first summer at Sandia I implemented mixed-precision gradient methods within trust-region algorithms for PDE-constrained optimization and developed theoretical guarantees for them, so that cheaper low-precision computations can be used where they are safe.</p><figure><div class="frame"><img class="only-light " src="../assets/img/research/mixed-precision-light.png" alt="CG convergence in different precisions" loading="lazy"><img class="only-dark " src="../assets/img/research/mixed-precision-dark.png" alt="CG convergence in different precisions" loading="lazy"></div><figcaption><b>Illustration.</b> Conjugate gradient on a 2D Poisson problem run entirely in double, single and half precision. The lower precisions stall at much larger residuals. Mixed-precision methods aim to get the speed of low precision with the accuracy of high precision.</figcaption></figure></div>
-<section><div class="section-title"><h2>Related</h2></div><ul class="pubs"><li><span class="badge">Report</span><span class="title">Mixed Precision Linear Algebra in Trust-Region Methods for PDE Constrained Optimization</span><br><span>A. Sethi-Olowin and R. Baraldi.</span> <span class="meta">Computer Science Research Institute Summer Proceedings, Sandia National Laboratories, 2025. SAND2025-14267O.</span></li></ul></section>
+<div class="project-figure"><div class="placeholder">image coming soon</div></div>
+<div class="prose"><p>Mixed-precision gradient methods for trust-region algorithms in PDE-constrained optimization, with theoretical guarantees, developed with Sandia's Rapid Optimization Library team.</p></div>
+<section style="margin-top:40px"><div class="section-title"><h2>Related</h2></div><ul class="pubs"><li><span class="badge">Report</span><span class="title">Mixed Precision Linear Algebra in Trust-Region Methods for PDE Constrained Optimization</span><br><span>A. Sethi-Olowin and R. Baraldi.</span> <span class="meta">Computer Science Research Institute Summer Proceedings, Sandia National Laboratories, 2025. SAND2025-14267O.</span></li></ul></section>
 
 </div>
 </main>

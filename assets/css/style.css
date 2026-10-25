@@ -148,7 +148,7 @@ section + section { margin-top: 64px; }
 .pubs .badge { margin-right: 8px; vertical-align: 1px; }
 
 /* project page */
-.back { font-size: 0.9rem; display: inline-block; margin-bottom: 20px; }
+.back { font-size: 0.9rem; display: block; width: fit-content; margin-bottom: 16px; }
 .meta-line { color: var(--muted); font-size: 0.95rem; margin-top: 10px; }
 .prose { max-width: 720px; }
 .prose p { margin: 0 0 16px; }
@@ -201,3 +201,15 @@ figcaption b { color: var(--text); font-weight: 600; }
   .site-header .wrap { height: auto; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; }
   .dropdown-menu { right: 0; left: auto; }
 }
+
+/* project image placeholder + project page figure */
+.placeholder {
+  width: 100%; height: 100%; display: grid; place-items: center;
+  background: repeating-linear-gradient(135deg, var(--surface-2) 0 12px, var(--surface) 12px 24px);
+  color: var(--muted); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.project-figure {
+  max-width: 760px; aspect-ratio: 16 / 9; border: 1px solid var(--border); border-radius: 12px;
+  overflow: hidden; background: var(--surface); margin-bottom: 24px;
+}
+.project-figure img { width: 100%; height: 100%; object-fit: contain; }
