@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast Solvers for HSS Matrices — Arjun Sethi-Olowin</title>
+<meta name="description" content="Structured linear algebra for least-squares and minimum-norm problems">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>∑</text></svg>">
+<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Arjun Sethi-Olowin</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html">Home</a>
+      <div class="dropdown">
+        <a href="../research.html" aria-current="page">Research ▾</a>
+        <div class="dropdown-menu"><a href="../research.html">Overview</a><hr><a href="../research/hss.html">Fast Solvers for HSS Matrices</a><a href="../research/kalman.html">Robust Kalman Smoothing</a><a href="../research/proximal.html">Proximal Operators for Trust-Region Methods</a><a href="../research/mixed-precision.html">Mixed-Precision Trust-Region Methods</a></div>
+      </div>
+      <a href="../cv.html">CV</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+    </nav>
+  </div>
+</header>
+<main>
+<div class="wrap">
+
+<a class="back" href="../research.html">← Back to research</a>
+<h1>Fast Solvers for HSS Matrices</h1>
+<div class="subtitle">Structured linear algebra for least-squares and minimum-norm problems</div>
+<div class="meta-line">With <a href="https://heatherw3521.github.io/">Heather Wilber</a> · University of Washington · 2024–present</div>
+<hr class="rule">
+<div class="prose"><p>Many matrices that arise in practice, for example from integral equations, kernel methods and PDE discretizations, are dense but highly structured: their off-diagonal blocks are numerically low rank. Hierarchically semi-separable (HSS) matrices capture this structure through a recursive partition of the matrix, storing each off-diagonal block in compressed form. This allows matrix–vector products and direct solves in close to linear time, instead of the cubic cost of dense linear algebra.</p><p>I develop and analyze algorithms that exploit HSS structure for linear optimization problems, including least-squares and minimum-norm problems. For square systems the standard direct solver is based on the ULV factorization; my work extends this kind of fast factorization to the minimum-norm setting.</p><p>I am also developing publicly accessible MATLAB classes for computing with these structured matrices efficiently and robustly.</p><figure><div class="frame"><img class="only-light " src="../assets/img/research/hss-structure-light.png" alt="HSS partition of a matrix" loading="lazy"><img class="only-dark " src="../assets/img/research/hss-structure-dark.png" alt="HSS partition of a matrix" loading="lazy"></div><figcaption><b>Illustration.</b> A three-level HSS partition of a 1024 × 1024 kernel matrix with entries log|x<sub>i</sub> − x<sub>j</sub>|. Diagonal blocks are kept dense; each off-diagonal block is stored as a low-rank product. The ranks shown are computed numerically at relative tolerance 10<sup>−8</sup>.</figcaption></figure><figure><div class="frame"><img class="only-light " src="../assets/img/research/hss-decay-light.png" alt="Singular value decay" loading="lazy"><img class="only-dark " src="../assets/img/research/hss-decay-dark.png" alt="Singular value decay" loading="lazy"></div><figcaption><b>Illustration.</b> Normalized singular values of the largest off-diagonal block of the same kernel matrix, compared with a random matrix of the same size. The rapid decay is what makes compression possible.</figcaption></figure></div>
+<section><div class="section-title"><h2>Related</h2></div><ul class="pubs"><li><span class="badge alt">Talk</span><span class="title">Efficient Solvers for Linear Optimization via the Hierarchically Semi-Separable Matrix Factorization</span><br><span class="meta">Invited minisymposium talk, SIAM Conference on Mathematics of Data Science, Salt Lake City, UT, November 2026.</span></li><li><span class="badge alt">Talk</span><span class="title">Efficient Solvers for Linear Optimization via the Hierarchically Semi-Separable Matrix Factorization</span><br><span class="meta">Invited minisymposium talk, Joint Mathematics Meetings, Chicago, IL, January 2027.</span></li></ul></section>
+
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Arjun Sethi-Olowin</span>
+    <span><a href="mailto:as12@uw.edu">as12@uw.edu</a> · <a href="https://scholar.google.com/citations?user=qc6CJjYAAAAJ">Google Scholar</a></span>
+  </div>
+</footer>
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>

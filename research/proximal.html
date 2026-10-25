@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proximal Operators for Trust-Region Methods — Arjun Sethi-Olowin</title>
+<meta name="description" content="Viscosity-based approximations in nonsmooth, regularized optimization">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>∑</text></svg>">
+<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Arjun Sethi-Olowin</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html">Home</a>
+      <div class="dropdown">
+        <a href="../research.html" aria-current="page">Research ▾</a>
+        <div class="dropdown-menu"><a href="../research.html">Overview</a><hr><a href="../research/hss.html">Fast Solvers for HSS Matrices</a><a href="../research/kalman.html">Robust Kalman Smoothing</a><a href="../research/proximal.html">Proximal Operators for Trust-Region Methods</a><a href="../research/mixed-precision.html">Mixed-Precision Trust-Region Methods</a></div>
+      </div>
+      <a href="../cv.html">CV</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+    </nav>
+  </div>
+</header>
+<main>
+<div class="wrap">
+
+<a class="back" href="../research.html">← Back to research</a>
+<h1>Proximal Operators for Trust-Region Methods</h1>
+<div class="subtitle">Viscosity-based approximations in nonsmooth, regularized optimization</div>
+<div class="meta-line">With Bobby Baraldi · Rapid Optimization Library team, Sandia National Laboratories · Summer 2026</div>
+<hr class="rule">
+<div class="prose"><p>Many optimization problems combine a smooth objective with a nonsmooth regularizer, such as an ℓ<sub>1</sub> penalty that promotes sparsity. Trust-region methods for these problems repeatedly evaluate the proximal operator of the regularizer, which can be expensive or unavailable in closed form.</p><p>In my second summer at Sandia I developed proximal operator approximations for nonsmooth trust-region optimization based on viscosity solutions of Hamilton–Jacobi equations. The Moreau envelope of a function solves a Hamilton–Jacobi equation, and adding a small viscosity term gives a smooth approximation whose minimizer can be estimated from samples instead of solving a subproblem exactly.</p><figure><div class="frame"><img class="only-light " src="../assets/img/research/prox-light.png" alt="Exact and approximate proximal operators" loading="lazy"><img class="only-dark " src="../assets/img/research/prox-dark.png" alt="Exact and approximate proximal operators" loading="lazy"></div><figcaption><b>Illustration.</b> The proximal operator of |x| (soft thresholding) and its viscous approximations for decreasing viscosity δ. As δ → 0 the approximation converges to the exact operator.</figcaption></figure><figure><div class="frame"><img class="only-light " src="../assets/img/research/envelope-light.png" alt="Moreau envelope and viscous solutions" loading="lazy"><img class="only-dark " src="../assets/img/research/envelope-dark.png" alt="Moreau envelope and viscous solutions" loading="lazy"></div><figcaption><b>Illustration.</b> The Moreau envelope of |x| and the corresponding viscous Hamilton–Jacobi solutions, computed by numerical integration of the Cole–Hopf formula.</figcaption></figure></div>
+<section><div class="section-title"><h2>Related</h2></div><ul class="pubs"><li><span class="badge">Forthcoming</span><span class="title">Viscosity-based Proximal Operators in Nonsmooth, Regularized Optimization</span><br><span>A. Sethi-Olowin and R. Baraldi.</span> <span class="meta">Computer Science Research Institute Summer Proceedings, Sandia National Laboratories, 2026.</span></li></ul></section>
+
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Arjun Sethi-Olowin</span>
+    <span><a href="mailto:as12@uw.edu">as12@uw.edu</a> · <a href="https://scholar.google.com/citations?user=qc6CJjYAAAAJ">Google Scholar</a></span>
+  </div>
+</footer>
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>
