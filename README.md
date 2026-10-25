@@ -7,4 +7,11 @@ Personal academic website of Arjun Sethi-Olowin — plain HTML/CSS, no build ste
 - `assets/img/research/` — one image per research project
 - `assets/pdf/Arjun_Sethi-Olowin_CV.pdf` — CV download
 
-Pushing to `master` runs `.github/workflows/deploy.yml`, which copies the site to the `gh-pages` branch that GitHub Pages serves.
+The live site is https://students.washington.edu/as12/ (UW student web hosting). To update it, from this folder:
+
+```
+rsync -rtv --exclude '.git*' --exclude '.github' --exclude '.nojekyll' --exclude 'README.md' --exclude '.DS_Store' --exclude 'redirect' ./ as12@vergil.u.washington.edu:student_html/
+ssh as12@vergil.u.washington.edu 'chmod -R g+rX ~/student_html/'
+```
+
+`redirect/` is what drabdude.github.io serves: pushing to `master` publishes it to `gh-pages`, and it forwards every old URL to the UW site.

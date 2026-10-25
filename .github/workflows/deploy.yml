@@ -13,11 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Publish static files to gh-pages
+      - name: Publish redirect pages to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./redirect
           publish_branch: gh-pages
-          exclude_assets: ".github,README.md"
           enable_jekyll: false
